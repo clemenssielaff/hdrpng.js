@@ -170,7 +170,7 @@
           var len=width,rs=0; pos-=4; while (len>0) {
             img.set(d8.slice(pos,pos+=4),ipos); 
             if (img[ipos]==1&&img[ipos+1]==1&&img[ipos+2]==1) {
-              for (img[ipos+3]<<rs; i>0; i--) {
+              for (var i=img[ipos+3]<<rs; i>0; i--) {
                 img.set(img.slice(ipos-4,ipos),ipos);
                 ipos+=4;
                 len--
